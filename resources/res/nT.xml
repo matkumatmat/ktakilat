@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ImageView android:id="@+id/imageView2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="32dp" android:layout_marginRight="16dp" android:src="@drawable/liveness_pre_guide" android:adjustViewBounds="true" android:contentDescription="@string/liveness_pre_title"/>
+    </ScrollView>
+    <androidx.appcompat.widget.AppCompatButton android:textSize="16sp" android:textColor="@color/T1" android:id="@+id/open_face_button" android:background="@drawable/filled_button" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" android:layout_marginBottom="32dp" android:text="@string/face_open" android:elevation="0dp" android:stateListAnimator="@null" android:outlineProvider="none"/>
+</LinearLayout>

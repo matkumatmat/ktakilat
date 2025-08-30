@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:oneshot="true">
+    <item android:duration="50" android:drawable="@mipmap/mouth_00"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_01"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_02"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_03"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_04"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_05"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_06"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_07"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_08"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_09"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_10"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_11"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_12"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_13"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_14"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_15"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_16"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_17"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_18"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_19"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_20"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_21"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_22"/>
+    <item android:duration="50" android:drawable="@mipmap/mouth_23"/>
+</animation-list>

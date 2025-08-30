@@ -1,0 +1,101 @@
+package kotlinx.coroutines.flow;
+
+import kotlin.Metadata;
+import kotlin.ResultKt;
+import kotlin.Unit;
+import kotlin.coroutines.Continuation;
+import kotlin.coroutines.intrinsics.CoroutineSingletons;
+import kotlin.coroutines.jvm.internal.DebugMetadata;
+import kotlin.coroutines.jvm.internal.SuspendLambda;
+import kotlin.jvm.functions.Function2;
+import kotlin.jvm.functions.Function3;
+import kotlin.jvm.functions.Function7;
+import kotlin.jvm.internal.SourceDebugExtension;
+import kotlinx.coroutines.flow.internal.CombineKt;
+
+@Metadata(d1 = {"\u0000\u000e\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002*\b\u0012\u0004\u0012\u0002H\u00020\u0003H\n¨\u0006\u0004"}, d2 = {"<anonymous>", "", "R", "Lkotlinx/coroutines/flow/FlowCollector;", "kotlinx/coroutines/flow/FlowKt__ZipKt$combineTransformUnsafe$1"}, k = 3, mv = {2, 0, 0}, xi = 48)
+@DebugMetadata(c = "kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5", f = "Zip.kt", i = {}, l = {269}, m = "invokeSuspend", n = {}, s = {})
+public final class FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5 extends SuspendLambda implements Function2<FlowCollector<Object>, Continuation<? super Unit>, Object> {
+    public int c;
+    public /* synthetic */ Object d;
+    public final /* synthetic */ Flow[] e;
+    public final /* synthetic */ Function7 f;
+
+    @SourceDebugExtension({"SMAP\nZip.kt\nKotlin\n*S Kotlin\n*F\n+ 1 Zip.kt\nkotlinx/coroutines/flow/FlowKt__ZipKt$combineTransformUnsafe$1$1\n+ 2 Zip.kt\nkotlinx/coroutines/flow/FlowKt__ZipKt\n*L\n1#1,269:1\n217#2,8:270\n*E\n"})
+    @Metadata(d1 = {"\u0000\u0016\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0011\n\u0000\u0010\u0000\u001a\u00020\u0001\"\u0004\b\u0000\u0010\u0002\"\u0006\b\u0001\u0010\u0003\u0018\u0001*\b\u0012\u0004\u0012\u0002H\u00020\u00042\f\u0010\u0005\u001a\b\u0012\u0004\u0012\u0002H\u00030\u0006H\n¨\u0006\u0007"}, d2 = {"<anonymous>", "", "R", "T", "Lkotlinx/coroutines/flow/FlowCollector;", "it", "", "kotlinx/coroutines/flow/FlowKt__ZipKt$combineTransformUnsafe$1$1"}, k = 3, mv = {2, 0, 0}, xi = 48)
+    @DebugMetadata(c = "kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5$1", f = "Zip.kt", i = {}, l = {270}, m = "invokeSuspend", n = {}, s = {})
+    /* renamed from: kotlinx.coroutines.flow.FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5$1  reason: invalid class name */
+    public static final class AnonymousClass1 extends SuspendLambda implements Function3<FlowCollector<Object>, Object[], Continuation<? super Unit>, Object> {
+        public int c;
+        public /* synthetic */ FlowCollector d;
+        public /* synthetic */ Object[] e;
+
+        public final Object invokeSuspend(Object obj) {
+            CoroutineSingletons coroutineSingletons = CoroutineSingletons.COROUTINE_SUSPENDED;
+            int i = this.c;
+            if (i == 0) {
+                ResultKt.b(obj);
+                FlowCollector flowCollector = this.d;
+                Object[] objArr = this.e;
+                Object obj2 = objArr[0];
+                Object obj3 = objArr[1];
+                Object obj4 = objArr[2];
+                Object obj5 = objArr[3];
+                Object obj6 = objArr[4];
+                this.c = 1;
+                if (function7.invoke(flowCollector, obj2, obj3, obj4, obj5, obj6, this) == coroutineSingletons) {
+                    return coroutineSingletons;
+                }
+            } else if (i == 1) {
+                ResultKt.b(obj);
+            } else {
+                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+            }
+            return Unit.f696a;
+        }
+
+        public final Object invoke(FlowCollector<Object> flowCollector, Object[] objArr, Continuation<? super Unit> continuation) {
+            AnonymousClass1 r0 = new AnonymousClass1(continuation, function7);
+            r0.d = flowCollector;
+            r0.e = objArr;
+            return r0.invokeSuspend(Unit.f696a);
+        }
+    }
+
+    /* JADX INFO: super call moved to the top of the method (can break code semantics) */
+    public FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5(Flow[] flowArr, Continuation continuation, Function7 function7) {
+        super(2, continuation);
+        this.e = flowArr;
+        this.f = function7;
+    }
+
+    public final Continuation<Unit> create(Object obj, Continuation<?> continuation) {
+        FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5 flowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5 = new FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5(this.e, continuation, this.f);
+        flowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5.d = obj;
+        return flowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5;
+    }
+
+    public final Object invokeSuspend(Object obj) {
+        CoroutineSingletons coroutineSingletons = CoroutineSingletons.COROUTINE_SUSPENDED;
+        int i = this.c;
+        if (i == 0) {
+            ResultKt.b(obj);
+            FlowKt__ZipKt$nullArrayFactory$1 flowKt__ZipKt$nullArrayFactory$1 = FlowKt__ZipKt$nullArrayFactory$1.c;
+            final Function7 function7 = this.f;
+            AnonymousClass1 r3 = new AnonymousClass1((Continuation) null);
+            this.c = 1;
+            if (CombineKt.a(this, flowKt__ZipKt$nullArrayFactory$1, r3, (FlowCollector) this.d, this.e) == coroutineSingletons) {
+                return coroutineSingletons;
+            }
+        } else if (i == 1) {
+            ResultKt.b(obj);
+        } else {
+            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+        }
+        return Unit.f696a;
+    }
+
+    public final Object invoke(FlowCollector<Object> flowCollector, Continuation<? super Unit> continuation) {
+        return ((FlowKt__ZipKt$combineTransform$$inlined$combineTransformUnsafe$FlowKt__ZipKt$5) create(flowCollector, continuation)).invokeSuspend(Unit.f696a);
+    }
+}

@@ -1,0 +1,82 @@
+package com.google.firebase.encoders.proto;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import com.google.firebase.encoders.EncodingException;
+import com.google.firebase.encoders.FieldDescriptor;
+import com.google.firebase.encoders.ValueEncoderContext;
+import java.io.IOException;
+
+class ProtobufValueEncoderContext implements ValueEncoderContext {
+    private boolean encoded = false;
+    private FieldDescriptor field;
+    private final ProtobufDataEncoderContext objEncoderCtx;
+    private boolean skipDefault = false;
+
+    public ProtobufValueEncoderContext(ProtobufDataEncoderContext protobufDataEncoderContext) {
+        this.objEncoderCtx = protobufDataEncoderContext;
+    }
+
+    private void checkNotUsed() {
+        if (!this.encoded) {
+            this.encoded = true;
+            return;
+        }
+        throw new EncodingException("Cannot encode a second value in the ValueEncoderContext");
+    }
+
+    @NonNull
+    public ValueEncoderContext add(@Nullable String str) throws IOException {
+        checkNotUsed();
+        this.objEncoderCtx.add(this.field, (Object) str, this.skipDefault);
+        return this;
+    }
+
+    public void resetContext(FieldDescriptor fieldDescriptor, boolean z) {
+        this.encoded = false;
+        this.field = fieldDescriptor;
+        this.skipDefault = z;
+    }
+
+    @NonNull
+    public ValueEncoderContext add(float f) throws IOException {
+        checkNotUsed();
+        this.objEncoderCtx.add(this.field, f, this.skipDefault);
+        return this;
+    }
+
+    @NonNull
+    public ValueEncoderContext add(double d) throws IOException {
+        checkNotUsed();
+        this.objEncoderCtx.add(this.field, d, this.skipDefault);
+        return this;
+    }
+
+    @NonNull
+    public ValueEncoderContext add(int i) throws IOException {
+        checkNotUsed();
+        this.objEncoderCtx.add(this.field, i, this.skipDefault);
+        return this;
+    }
+
+    @NonNull
+    public ValueEncoderContext add(long j) throws IOException {
+        checkNotUsed();
+        this.objEncoderCtx.add(this.field, j, this.skipDefault);
+        return this;
+    }
+
+    @NonNull
+    public ValueEncoderContext add(boolean z) throws IOException {
+        checkNotUsed();
+        this.objEncoderCtx.add(this.field, z, this.skipDefault);
+        return this;
+    }
+
+    @NonNull
+    public ValueEncoderContext add(@NonNull byte[] bArr) throws IOException {
+        checkNotUsed();
+        this.objEncoderCtx.add(this.field, (Object) bArr, this.skipDefault);
+        return this;
+    }
+}

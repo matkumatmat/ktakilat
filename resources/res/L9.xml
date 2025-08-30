@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/scaffoldBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/page_title" layout="@layout/modern_app_bar"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="36dp" android:layout_marginRight="16dp" android:layout_marginBottom="36dp">
+            <TextView android:textSize="12sp" android:textColor="@color/c_94959b" android:id="@+id/tip_2_tv" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/send_otp_tip"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/phone_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/c_2a2a2a" android:id="@+id/get_code_phone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:text="" android:layout_weight="1" android:layout_marginEnd="16dp"/>
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/ktaSecondary" android:gravity="center" android:layout_gravity="center" android:id="@+id/verify_resend_code_title" android:background="@drawable/inkwell_background" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0dp" android:minHeight="44dp" android:text="@string/send_code" android:textAlignment="center" android:backgroundTint="@null" android:outlineProvider="none"/>
+            </LinearLayout>
+            <com.chaos.view.PinView android:textSize="20sp" android:textStyle="bold" android:layout_gravity="center" android:id="@+id/code_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:cursorVisible="true" android:inputType="number" app:cursorWidth="2dp" app:itemCount="6" app:itemHeight="48dp" app:itemRadius="8dp" app:itemSpacing="8dp" app:itemWidth="42dp" app:lineColor="@color/otp_line_color" app:lineWidth="1dp" app:viewType="0" style="@style/PinWidget.PinView"/>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/llSendVoiceCode" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="#ffb2b8c2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/canot_receive_sms"/>
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="#ff7cacea" android:id="@+id/tvSendVoiceCode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9dp" android:text="@string/send_voice_code" android:layout_marginStart="9dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/change_another_otp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"/>
+                <TextView android:enabled="false" android:textSize="@dimen/sp16" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/commit_button" android:background="@drawable/filled_button" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="32dp" android:text="@string/verification"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

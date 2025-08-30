@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="110dp">
+        <TextView android:textColor="@color/c999" android:gravity="center" android:id="@+id/tv_facebook" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Facebook" android:drawableTop="@drawable/icon_share_facebook"/>
+        <TextView android:textColor="@color/c999" android:gravity="center" android:id="@+id/tv_instagram" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Instagram" android:drawableTop="@drawable/icon_share_instagram"/>
+        <TextView android:textColor="@color/c999" android:gravity="center" android:id="@+id/tv_line" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="  LINE  " android:drawableTop="@drawable/icon_share_line"/>
+        <TextView android:textColor="@color/c999" android:gravity="center" android:id="@+id/onlineServiceTv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="WhatsApp" android:drawableTop="@drawable/icon_share_whatsapp"/>
+    </LinearLayout>
+    <View android:background="@color/B3" android:layout_width="match_parent" android:layout_height="10dp"/>
+    <TextView android:textSize="@dimen/sp15" android:textColor="@color/c333" android:gravity="center" android:id="@+id/tv_cancel" android:layout_width="match_parent" android:layout_height="49dp" android:text="@string/cancel"/>
+</LinearLayout>

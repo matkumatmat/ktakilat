@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_16radius" android:paddingTop="@dimen/dp18" android:paddingBottom="@dimen/dp30" android:layout_width="320dp" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:paddingStart="@dimen/dp18" android:paddingEnd="@dimen/dp18">
+        <ImageView android:layout_gravity="center_horizontal" android:layout_width="203dp" android:layout_height="148dp" android:src="@drawable/ic_face_onoff_ektp"/>
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/c_222222" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp14" android:text="@string/face_onoff_dialog_guide"/>
+        <TextView android:textSize="12sp" android:textColor="@color/c_222222" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp24" android:text="@string/face_onoff_dialog_guide_tip"/>
+        <TextView android:textSize="@dimen/sp16" android:textStyle="bold" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/next_tv" android:background="@drawable/filled_button" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="24dp" android:text="@string/face_onoff_dialog_btn"/>
+    </LinearLayout>
+</RelativeLayout>

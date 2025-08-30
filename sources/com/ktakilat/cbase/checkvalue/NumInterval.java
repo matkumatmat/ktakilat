@@ -1,0 +1,18 @@
+package com.ktakilat.cbase.checkvalue;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target({ElementType.FIELD})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface NumInterval {
+    boolean leftIn() default true;
+
+    double leftNum() default Double.MIN_VALUE;
+
+    boolean rightIn() default true;
+
+    double rightNum() default Double.MAX_VALUE;
+}

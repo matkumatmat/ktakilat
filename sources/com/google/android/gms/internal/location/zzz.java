@@ -1,0 +1,19 @@
+package com.google.android.gms.internal.location;
+
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.common.api.internal.BaseImplementation;
+
+final class zzz extends zzah {
+    private final BaseImplementation.ResultHolder<Status> zza;
+
+    public zzz(BaseImplementation.ResultHolder<Status> resultHolder) {
+        this.zza = resultHolder;
+    }
+
+    public final void a_() {
+    }
+
+    public final void zza(zzac zzac) {
+        this.zza.setResult(zzac.getStatus());
+    }
+}

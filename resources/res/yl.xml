@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/page_title" layout="@layout/c_widget_action_bar"/>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@+id/face_content_layout" android:layout_width="match_parent" android:layout_height="350dp" android:layout_marginTop="@dimen/dp50"/>
+    <TextView android:textSize="@dimen/sp16" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@+id/face_tip_top" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp16" android:layout_marginTop="@dimen/dp32" android:layout_marginRight="@dimen/dp16" android:text=""/>
+    <TextView android:textSize="@dimen/sp14" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@+id/face_tip_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp16" android:layout_marginTop="@dimen/dp32" android:layout_marginRight="@dimen/dp16" android:text=""/>
+    <RelativeLayout android:orientation="vertical" android:paddingBottom="@dimen/dp32" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="@dimen/dp16" android:layout_marginRight="@dimen/dp16" android:layout_weight="1">
+        <ImageView android:id="@+id/iv" android:layout_width="@dimen/dp28" android:layout_height="@dimen/dp28" android:src="@drawable/icon_shield" android:layout_alignParentBottom="true"/>
+        <TextView android:textSize="@dimen/sp10" android:textColor="@color/c_94959b" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="@dimen/dp28" android:text="@string/face_onoff_safe" android:layout_alignParentBottom="true" android:layout_marginStart="@dimen/dp8" android:layout_toEndOf="@+id/iv"/>
+    </RelativeLayout>
+</LinearLayout>

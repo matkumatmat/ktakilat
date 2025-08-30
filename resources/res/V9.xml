@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:paddingLeft="16dp" android:paddingTop="36dp" android:paddingRight="16dp" android:paddingBottom="36dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="18sp" android:textStyle="bold" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/set_first_pwd_title"/>
+        <TextView android:id="@+id/new_password_hint" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:layout_marginBottom="12dp" android:text="@string/new_password_hint"/>
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/password_rounded_outline" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText android:id="@+id/new_password" android:background="@null" android:layout_width="0dp" android:layout_height="wrap_content" android:minHeight="40dp" android:hint="@string/s_p" android:maxLength="20" android:layout_weight="1" android:inputType="textPassword" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"/>
+            <androidx.appcompat.widget.AppCompatButton android:id="@+id/visibility_toggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableStart="@drawable/visibility_off_rounded" style="@style/Widget.Material3.Button.IconButton"/>
+        </LinearLayout>
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="36dp">
+            <androidx.appcompat.widget.AppCompatButton android:enabled="false" android:textColor="@color/white" android:id="@+id/next_operation" android:background="@drawable/filled_button" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/next_operation" android:outlineProvider="none"/>
+            <com.google.android.material.progressindicator.CircularProgressIndicator android:layout_gravity="center" android:id="@+id/loading" android:visibility="gone" android:layout_width="32dp" android:layout_height="32dp" android:indeterminate="true"/>
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,40 @@
+package io.reactivex.internal.operators.single;
+
+import io.reactivex.Single;
+import io.reactivex.SingleObserver;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.internal.disposables.DisposableHelper;
+
+public final class SingleHide<T> extends Single<T> {
+
+    public static final class HideSingleObserver<T> implements SingleObserver<T>, Disposable {
+        public Disposable c;
+
+        public final void dispose() {
+            this.c.dispose();
+        }
+
+        public final boolean isDisposed() {
+            return this.c.isDisposed();
+        }
+
+        public final void onError(Throwable th) {
+            throw null;
+        }
+
+        public final void onSubscribe(Disposable disposable) {
+            if (DisposableHelper.validate(this.c, disposable)) {
+                this.c = disposable;
+                throw null;
+            }
+        }
+
+        public final void onSuccess(Object obj) {
+            throw null;
+        }
+    }
+
+    public final void c(SingleObserver singleObserver) {
+        throw null;
+    }
+}

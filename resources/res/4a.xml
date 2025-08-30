@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:top="1dp" android:bottom="1dp">
+        <shape>
+            <solid android:color="@android:color/transparent"/>
+        </shape>
+    </item>
+    <item android:left="24dp" android:right="24dp">
+        <shape>
+            <solid android:color="@color/cddd"/>
+            <size android:height="1dp"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:oneshot="true">
+    <item android:duration="50" android:drawable="@mipmap/down_00"/>
+    <item android:duration="50" android:drawable="@mipmap/down_01"/>
+    <item android:duration="50" android:drawable="@mipmap/down_02"/>
+    <item android:duration="50" android:drawable="@mipmap/down_03"/>
+    <item android:duration="50" android:drawable="@mipmap/down_04"/>
+    <item android:duration="50" android:drawable="@mipmap/down_05"/>
+    <item android:duration="50" android:drawable="@mipmap/down_06"/>
+    <item android:duration="50" android:drawable="@mipmap/down_07"/>
+    <item android:duration="50" android:drawable="@mipmap/down_08"/>
+    <item android:duration="50" android:drawable="@mipmap/down_09"/>
+    <item android:duration="50" android:drawable="@mipmap/down_10"/>
+    <item android:duration="50" android:drawable="@mipmap/down_11"/>
+    <item android:duration="50" android:drawable="@mipmap/down_12"/>
+    <item android:duration="50" android:drawable="@mipmap/down_13"/>
+    <item android:duration="50" android:drawable="@mipmap/down_14"/>
+    <item android:duration="50" android:drawable="@mipmap/down_15"/>
+    <item android:duration="50" android:drawable="@mipmap/down_16"/>
+    <item android:duration="50" android:drawable="@mipmap/down_17"/>
+    <item android:duration="50" android:drawable="@mipmap/down_18"/>
+    <item android:duration="50" android:drawable="@mipmap/down_19"/>
+    <item android:duration="50" android:drawable="@mipmap/down_20"/>
+    <item android:duration="50" android:drawable="@mipmap/down_21"/>
+    <item android:duration="50" android:drawable="@mipmap/down_22"/>
+    <item android:duration="50" android:drawable="@mipmap/down_23"/>
+    <item android:duration="50" android:drawable="@mipmap/down_24"/>
+    <item android:duration="50" android:drawable="@mipmap/down_25"/>
+    <item android:duration="50" android:drawable="@mipmap/down_26"/>
+    <item android:duration="50" android:drawable="@mipmap/down_27"/>
+    <item android:duration="50" android:drawable="@mipmap/down_28"/>
+    <item android:duration="50" android:drawable="@mipmap/down_29"/>
+    <item android:duration="50" android:drawable="@mipmap/down_30"/>
+    <item android:duration="50" android:drawable="@mipmap/down_31"/>
+</animation-list>

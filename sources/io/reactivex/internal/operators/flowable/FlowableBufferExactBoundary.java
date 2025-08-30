@@ -1,0 +1,141 @@
+package io.reactivex.internal.operators.flowable;
+
+import io.reactivex.FlowableSubscriber;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.exceptions.Exceptions;
+import io.reactivex.internal.queue.MpscLinkedQueue;
+import io.reactivex.internal.subscribers.QueueDrainSubscriber;
+import io.reactivex.internal.subscriptions.EmptySubscription;
+import io.reactivex.internal.subscriptions.SubscriptionHelper;
+import io.reactivex.subscribers.DisposableSubscriber;
+import io.reactivex.subscribers.SerializedSubscriber;
+import java.util.Collection;
+import org.reactivestreams.Subscription;
+
+public final class FlowableBufferExactBoundary<T, U extends Collection<? super T>, B> extends AbstractFlowableWithUpstream<T, U> {
+
+    public static final class BufferBoundarySubscriber<T, U extends Collection<? super T>, B> extends DisposableSubscriber<B> {
+        public final void onComplete() {
+            throw null;
+        }
+
+        public final void onError(Throwable th) {
+            throw null;
+        }
+
+        public final void onNext(Object obj) {
+            throw null;
+        }
+    }
+
+    public static final class BufferExactBoundarySubscriber<T, U extends Collection<? super T>, B> extends QueueDrainSubscriber<T, U, U> implements FlowableSubscriber<T>, Subscription, Disposable {
+        public Subscription k;
+        public Collection l;
+
+        public final boolean a(SerializedSubscriber serializedSubscriber, Object obj) {
+            this.e.onNext((Collection) obj);
+            return true;
+        }
+
+        public final void cancel() {
+            if (!this.g) {
+                this.g = true;
+                throw null;
+            }
+        }
+
+        public final void dispose() {
+            cancel();
+        }
+
+        public final boolean isDisposed() {
+            return this.g;
+        }
+
+        /* JADX WARNING: Code restructure failed: missing block: B:10:0x000d, code lost:
+            r2.f.offer(r0);
+            r2.i = true;
+         */
+        /* JADX WARNING: Code restructure failed: missing block: B:11:0x0019, code lost:
+            if (b() == false) goto L_?;
+         */
+        /* JADX WARNING: Code restructure failed: missing block: B:12:0x001b, code lost:
+            io.reactivex.internal.util.QueueDrainHelper.c(r2.f, r2.e, r2, r2);
+         */
+        /* JADX WARNING: Code restructure failed: missing block: B:19:?, code lost:
+            return;
+         */
+        /* JADX WARNING: Code restructure failed: missing block: B:20:?, code lost:
+            return;
+         */
+        /* Code decompiled incorrectly, please refer to instructions dump. */
+        public final void onComplete() {
+            /*
+                r2 = this;
+                monitor-enter(r2)
+                java.util.Collection r0 = r2.l     // Catch:{ all -> 0x0007 }
+                if (r0 != 0) goto L_0x0009
+                monitor-exit(r2)     // Catch:{ all -> 0x0007 }
+                return
+            L_0x0007:
+                r0 = move-exception
+                goto L_0x0023
+            L_0x0009:
+                r1 = 0
+                r2.l = r1     // Catch:{ all -> 0x0007 }
+                monitor-exit(r2)     // Catch:{ all -> 0x0007 }
+                io.reactivex.internal.queue.MpscLinkedQueue r1 = r2.f
+                r1.offer(r0)
+                r0 = 1
+                r2.i = r0
+                boolean r0 = r2.b()
+                if (r0 == 0) goto L_0x0022
+                io.reactivex.internal.queue.MpscLinkedQueue r0 = r2.f
+                io.reactivex.subscribers.SerializedSubscriber r1 = r2.e
+                io.reactivex.internal.util.QueueDrainHelper.c(r0, r1, r2, r2)
+            L_0x0022:
+                return
+            L_0x0023:
+                monitor-exit(r2)     // Catch:{ all -> 0x0007 }
+                throw r0
+            */
+            throw new UnsupportedOperationException("Method not decompiled: io.reactivex.internal.operators.flowable.FlowableBufferExactBoundary.BufferExactBoundarySubscriber.onComplete():void");
+        }
+
+        public final void onError(Throwable th) {
+            cancel();
+            this.e.onError(th);
+        }
+
+        public final void onNext(Object obj) {
+            synchronized (this) {
+                try {
+                    Collection collection = this.l;
+                    if (collection != null) {
+                        collection.add(obj);
+                    }
+                } catch (Throwable th) {
+                    throw th;
+                }
+            }
+        }
+
+        public final void onSubscribe(Subscription subscription) {
+            if (SubscriptionHelper.validate(this.k, subscription)) {
+                this.k = subscription;
+                try {
+                    throw null;
+                } catch (Throwable th) {
+                    Exceptions.a(th);
+                    this.g = true;
+                    subscription.cancel();
+                    EmptySubscription.error(th, this.e);
+                }
+            }
+        }
+    }
+
+    public final void b(FlowableSubscriber flowableSubscriber) {
+        this.d.a(new QueueDrainSubscriber(new SerializedSubscriber(flowableSubscriber), new MpscLinkedQueue()));
+    }
+}

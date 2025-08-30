@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/scaffoldBackground" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="56dp">
+        <ImageView android:gravity="center" android:id="@+id/backward" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="@dimen/title_bar_height" android:src="@drawable/kta_menu_back"/>
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/title_bar_height" android:text="@string/search_company_title"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/password_rounded_outline" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+            <EditText android:textSize="@dimen/sp14" android:textColor="@color/common_black" android:layout_gravity="center_vertical" android:id="@+id/et" android:background="#00000000" android:padding="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:hint="@string/search_company_input_hint" android:singleLine="true" android:layout_weight="1" android:imeOptions="actionDone"/>
+            <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/tv_ok" android:background="@drawable/bg_main_theme_12radius" android:visibility="gone" android:layout_width="40dp" android:layout_height="24dp" android:layout_marginRight="5dp" android:text="@string/ok"/>
+            <ImageView android:id="@+id/iv_right" android:paddingLeft="16dp" android:paddingRight="16dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/icon_search"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ListView android:id="@+id/lv" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

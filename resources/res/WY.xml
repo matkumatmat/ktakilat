@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_white_16radius" android:paddingTop="@dimen/dp18" android:paddingBottom="@dimen/dp30" android:layout_width="320dp" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:paddingStart="@dimen/dp18" android:paddingEnd="@dimen/dp18">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_width="97dp" android:layout_height="97dp" android:src="@drawable/ic_ektp_tip" android:layout_centerHorizontal="true"/>
+            <ImageView android:id="@+id/close_iv" android:background="@drawable/bg_shape_94959b_circle" android:padding="4dp" android:layout_width="@dimen/dp24" android:layout_height="@dimen/dp24" android:src="@drawable/ic_close_normal" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/dp20" android:textStyle="bold" android:textColor="@color/c_222222" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp8" android:text="@string/dialog_otp_verify_title"/>
+        <TextView android:textSize="@dimen/dp12" android:textColor="@color/c_222222" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp6" android:text="@string/change_phone_ektp_tip"/>
+        <TextView android:textSize="@dimen/dp20" android:textStyle="bold" android:textColor="@color/c_222222" android:layout_gravity="center_horizontal" android:id="@+id/ektp_no_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp20"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="@dimen/dp16" android:layout_marginTop="30dp" android:layout_marginRight="@dimen/dp16" android:layout_below="@+id/mobile_tv">
+                <View android:id="@+id/bg_1_view" android:background="@drawable/bg_border_94959b_8radius" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="2.5dp" android:layout_marginRight="2.5dp" android:layout_weight="1"/>
+                <View android:id="@+id/bg_2_view" android:background="@drawable/bg_border_94959b_8radius" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="2.5dp" android:layout_marginRight="2.5dp" android:layout_weight="1"/>
+                <View android:id="@+id/bg_3_view" android:background="@drawable/bg_border_94959b_8radius" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="2.5dp" android:layout_marginRight="2.5dp" android:layout_weight="1"/>
+                <View android:id="@+id/bg_4_view" android:background="@drawable/bg_border_94959b_8radius" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="2.5dp" android:layout_marginRight="2.5dp" android:layout_weight="1"/>
+                <View android:id="@+id/bg_5_view" android:background="@drawable/bg_border_94959b_8radius" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="2.5dp" android:layout_marginRight="2.5dp" android:layout_weight="1"/>
+                <View android:id="@+id/bg_6_view" android:background="@drawable/bg_border_94959b_8radius" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="2.5dp" android:layout_marginRight="2.5dp" android:layout_weight="1"/>
+            </LinearLayout>
+            <com.ktakilat.loan.weiget.ExcelEditView android:textColor="@color/c_2e343c" android:id="@+id/ektp_et" android:background="@null" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginLeft="@dimen/dp16" android:layout_marginTop="30dp" android:layout_marginRight="@dimen/dp16" android:layout_below="@+id/mobile_tv" android:inputType="number" android:imeOptions="actionSend"/>
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/dp11" android:textStyle="bold" android:textColor="@color/c_94959b" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp20" android:text="@string/change_phone_ektp_customer"/>
+    </LinearLayout>
+</RelativeLayout>

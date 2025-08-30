@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:oneshot="true">
+    <item android:duration="100" android:drawable="@mipmap/eye_00"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_01"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_02"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_03"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_04"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_05"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_06"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_07"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_08"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_09"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_10"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_11"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_12"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_13"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_14"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_15"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_16"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_17"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_18"/>
+    <item android:duration="100" android:drawable="@mipmap/eye_19"/>
+</animation-list>

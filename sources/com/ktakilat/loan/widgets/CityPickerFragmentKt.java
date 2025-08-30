@@ -1,0 +1,7 @@
+package com.ktakilat.loan.widgets;
+
+import kotlin.Metadata;
+
+@Metadata(d1 = {"\u0000\u0002\n\u0000¨\u0006\u0000"}, d2 = {"ktakilat_5.3.4(534)_2025-07-10-08-28_ktaInRelease"}, k = 2, mv = {2, 1, 0}, xi = 48)
+public final class CityPickerFragmentKt {
+}

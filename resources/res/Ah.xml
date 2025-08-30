@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_rounded_new_design" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="@color/c333" android:ellipsize="end" android:gravity="center" android:id="@+id/tv_title" android:background="@color/white" android:paddingLeft="@dimen/dp13" android:paddingRight="@dimen/dp13" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp"/>
+    <View android:id="@+id/divider" android:background="@color/cddd" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+    <ListView android:id="@+id/lv_selections" android:fadingEdgeLength="0dp" android:layout_width="match_parent" android:layout_height="0dp" android:divider="@drawable/dialog_divider_indent" android:dividerHeight="1dp" android:layout_weight="1"/>
+    <View android:background="@drawable/dialog_divider_indent" android:layout_width="match_parent" android:layout_height="1dp"/>
+    <include android:id="@+id/cancelBtn" layout="@layout/c_item_selections"/>
+</LinearLayout>

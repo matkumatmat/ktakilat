@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root_view" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.ktakilat.cbase.weight.VerticalSwipeRefreshLayout android:id="@+id/refresh_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/webContainer" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </com.ktakilat.cbase.weight.VerticalSwipeRefreshLayout>
+    <RelativeLayout android:id="@+id/holder_layout" android:background="@color/white" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@+id/holder_page_title" android:visibility="visible" layout="@layout/widget_h5_action_bar"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/holder_other_view" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/holder_page_title"/>
+        <ImageView android:id="@+id/holder_cache_iv" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY"/>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@+id/error_layout" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <include android:id="@+id/page_title" layout="@layout/c_widget_action_bar"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/home_error_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/page_title">
+            <ImageView android:layout_width="match_parent" android:layout_height="140dp" android:layout_marginLeft="@dimen/dp18" android:layout_marginTop="@dimen/dp6" android:layout_marginRight="@dimen/dp18" android:src="@drawable/icon_banner_default" android:scaleType="fitXY"/>
+            <ImageView android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp6" android:src="@drawable/default_page_guide" android:scaleType="fitStart" android:layout_centerHorizontal="true" android:layout_marginStart="12dp" android:layout_marginEnd="12dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/oops_layout" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/page_title">
+            <ImageView android:layout_width="@dimen/dp200" android:layout_height="@dimen/dp120" android:src="@drawable/ic_load_error"/>
+            <TextView android:textSize="@dimen/sp20" android:textColor="@color/O15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp60" android:layout_marginTop="@dimen/dp20" android:layout_marginRight="@dimen/dp60" android:text="@string/selfie_con_fail"/>
+            <TextView android:textSize="@dimen/sp20" android:textColor="@color/white" android:gravity="center" android:id="@+id/try_again_tv" android:background="@drawable/shape_bg_7cacea_8radius" android:layout_width="@dimen/dp160" android:layout_height="@dimen/dp40" android:layout_marginTop="@dimen/dp24" android:text="@string/selfie_con_try_agin"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
